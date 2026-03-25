@@ -1,0 +1,103 @@
+import '../models/football_match.dart';
+
+class MockDataService {
+  List<FootballMatch> getMatches() {
+    final now = DateTime.now();
+
+    return [
+      FootballMatch(
+        id: '1001',
+        league: 'Premier League',
+        round: 'Rodada 28',
+        venue: 'Etihad Stadium',
+        kickoff: DateTime(now.year, now.month, now.day, 16, 0),
+        home: const TeamSnapshot(
+          name: 'Manchester City',
+          position: 2,
+          recentForm: 'WWDWW',
+          goalsForAvg: 2.3,
+          goalsAgainstAvg: 0.9,
+          cornersAvg: 6.8,
+          bttsRate: 0.54,
+          homeAwayStrength: 86,
+        ),
+        away: const TeamSnapshot(
+          name: 'Brighton',
+          position: 9,
+          recentForm: 'DLWDL',
+          goalsForAvg: 1.4,
+          goalsAgainstAvg: 1.5,
+          cornersAvg: 4.7,
+          bttsRate: 0.62,
+          homeAwayStrength: 62,
+        ),
+        odds: const MatchOdds(homeWin: 1.52, draw: 4.30, awayWin: 6.10),
+        headToHeadHomeEdge: 78,
+        scenarioStability: 81,
+        oddsMomentumScore: 74,
+      ),
+      FootballMatch(
+        id: '1002',
+        league: 'La Liga',
+        round: 'Rodada 27',
+        venue: 'Santiago Bernabéu',
+        kickoff: DateTime(now.year, now.month, now.day, 17, 30),
+        home: const TeamSnapshot(
+          name: 'Real Madrid',
+          position: 1,
+          recentForm: 'WWWWW',
+          goalsForAvg: 2.1,
+          goalsAgainstAvg: 0.8,
+          cornersAvg: 6.1,
+          bttsRate: 0.46,
+          homeAwayStrength: 88,
+        ),
+        away: const TeamSnapshot(
+          name: 'Real Sociedad',
+          position: 6,
+          recentForm: 'WDLDW',
+          goalsForAvg: 1.3,
+          goalsAgainstAvg: 1.0,
+          cornersAvg: 5.3,
+          bttsRate: 0.41,
+          homeAwayStrength: 67,
+        ),
+        odds: const MatchOdds(homeWin: 1.70, draw: 3.85, awayWin: 5.50),
+        headToHeadHomeEdge: 72,
+        scenarioStability: 77,
+        oddsMomentumScore: 70,
+      ),
+      FootballMatch(
+        id: '1003',
+        league: 'Brasileirão Série A',
+        round: 'Rodada 12',
+        venue: 'Maracanã',
+        kickoff: DateTime(now.year, now.month, now.day, 20, 0),
+        home: const TeamSnapshot(
+          name: 'Flamengo',
+          position: 3,
+          recentForm: 'WWDLW',
+          goalsForAvg: 1.9,
+          goalsAgainstAvg: 1.1,
+          cornersAvg: 5.9,
+          bttsRate: 0.58,
+          homeAwayStrength: 82,
+        ),
+        away: const TeamSnapshot(
+          name: 'Athletico-PR',
+          position: 8,
+          recentForm: 'LWWDD',
+          goalsForAvg: 1.5,
+          goalsAgainstAvg: 1.2,
+          cornersAvg: 5.0,
+          bttsRate: 0.57,
+          homeAwayStrength: 65,
+        ),
+        odds: const MatchOdds(homeWin: 1.88, draw: 3.40, awayWin: 4.40),
+        headToHeadHomeEdge: 66,
+        scenarioStability: 69,
+        oddsMomentumScore: 68,
+      ),
+    ];
+  }
+}
